@@ -35,7 +35,6 @@ public class newDeckActivity extends AppCompatActivity {
         intent.setType("text/plain");
 
         startActivityForResult(intent, 41);
-        //placeholder
     }
 
     @Override
@@ -69,10 +68,11 @@ public class newDeckActivity extends AppCompatActivity {
 
     private String readFileContent(Uri deckURI) throws IOException {
         InputStream inputStream = getContentResolver().openInputStream(deckURI);
-        // I don't know what the frell either of these are, but I have used them before and they work.
 
+        // I don't know what the frell either of these are, but I have used them before and they work.
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
         StringBuilder stringBuilder = new StringBuilder();
+
         String currentLine;
         while ((currentLine = bufferedReader.readLine()) != null)
         {

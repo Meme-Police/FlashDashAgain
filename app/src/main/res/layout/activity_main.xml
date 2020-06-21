@@ -32,45 +32,32 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="165dp"
         android:layout_marginLeft="165dp"
-        android:layout_marginTop="217dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="153dp"
         android:layout_marginRight="153dp"
         android:layout_marginBottom="21dp"
-        android:text="New Deck"
+        android:onClick="NewDeckActivity"
+        android:text="Deck Editor"
         app:layout_constraintBottom_toTopOf="@+id/libraryButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.882"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MainLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/MainLogo"
+        app:layout_constraintVertical_bias="0.48000002" />
 
     <Button
         android:id="@+id/libraryButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="164dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginLeft="164dp"
         android:layout_marginEnd="159dp"
-        android:layout_marginBottom="305dp"
+        android:layout_marginRight="159dp"
         android:text="Library"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newDeckButton"
-        android:layout_marginLeft="164dp"
-        android:layout_marginRight="159dp" />
-
-    <Button
-        android:id="@+id/importDeckButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginBottom="208dp"
-        android:onClick="NewDeckActivity"
-        android:text="Import Deck"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/libraryButton" />
+        app:layout_constraintTop_toBottomOf="@+id/newDeckButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
