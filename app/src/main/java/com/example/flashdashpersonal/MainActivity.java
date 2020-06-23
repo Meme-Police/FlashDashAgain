@@ -17,8 +17,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void NewDeckActivity(View view)
     {
-
         Intent intent = new Intent(this, newDeckActivity.class);
+        startActivity(intent);
+    }
+
+    public void StartLibraryActivity(View view)
+    {
+        Intent intent = new Intent(this, LibraryActivity.class);
         startActivity(intent);
     }
 }
