@@ -32,16 +32,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="165dp"
         android:layout_marginLeft="165dp"
-        android:layout_marginTop="217dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="153dp"
         android:layout_marginRight="153dp"
         android:layout_marginBottom="21dp"
         android:onClick="NewDeckActivity"
-        android:text="New Deck"
+        android:text="Deck Editor"
         app:layout_constraintBottom_toTopOf="@+id/libraryButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.882"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MainLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/MainLogo"
+        app:layout_constraintVertical_bias="0.57" />
 
     <Button
         android:id="@+id/libraryButton"
@@ -57,6 +59,7 @@
         android:text="Library"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newDeckButton" />
 
