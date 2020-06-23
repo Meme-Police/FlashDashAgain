@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void LibraryActivity(View view)
+    public void StartLibraryActivity(View view)
     {
         Intent intent = new Intent(this, LibraryActivity.class);
         startActivity(intent);
