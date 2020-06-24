@@ -43,35 +43,12 @@ public class EditDeckActivity extends AppCompatActivity {
         editDeckName.setText(deck.deckName);
     }
 
-    public Library getMasterLibrary() throws IOException
-    {
 
-        Log.d("THIS ACTIVITY", "You called getMasterLibrary, this function will cause the" +
-                " program to crash if no file named masterLibrary.txt exists at /data/user/0/com.example.flashdashpersonal/files/masterLibrary.txt");
-        Library masterLibrary = null;
-        InputStream inputStream = getApplicationContext().openFileInput("localDeckLibrary.txt");
-        Log.d("THIS ACTIVITY", "file exists or was created");
-
-        if (inputStream != null) {
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-            StringBuilder stringBuilder = new StringBuilder();
-            String currentLine;
-
-            while ((currentLine = bufferedReader.readLine()) != null)
-            {
-                stringBuilder.append(currentLine + "\n");
-            }
-
-            inputStream.close();
-            masterLibrary = gson.fromJson(stringBuilder.toString(), Library.class);
-        }
-
-        return masterLibrary;
-    }
 
     public void saveDeck(View view) throws IOException
     {
-        Library masterLibrary = getMasterLibrary();
+        Library masterLibrary = new Library();
+        masterLibrary.loadMasterLibrary(getApplicationContext());
 
         if (masterLibrary == null)
         {

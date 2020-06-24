@@ -34,7 +34,13 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        Log.d("THIS ACTIVITY", "File Created at " + file.getPath());
+        if (fileCreated) {
+            Log.d("THIS ACTIVITY", "File Created at " + file.getPath());
+        }
+        
+        else {
+            Log.d("THIS ACTIVITY", "File already exists");
+        }
 
     }
 
