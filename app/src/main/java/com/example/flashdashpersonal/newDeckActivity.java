@@ -55,12 +55,15 @@ public class newDeckActivity extends AppCompatActivity {
     public void EditDeck(View view)
     {
 
-         /**********************************************************
-         * Put code to open a list view of locally saved decks here
-         * and load selected deck into this Activity's Deck object
-         ***********************************************************/
+        Log.d("ALL", "Edit Deck Called");
+         Intent intent = new Intent(this, DeckSelectActivity.class);
+         intent.putExtra("nextActivity", "EditDeckActivity");
 
-        startDeckEditorActivity(deck);
+        Log.d("ALL", "About to start DeckSelect");
+         startActivity(intent);
+
+         // We don't need this since we will be starting this activity from the DeckSelectActivity
+         // startDeckEditorActivity(deck);
     }
 
     // "New Deck" button
