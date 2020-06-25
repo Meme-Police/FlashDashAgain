@@ -20,6 +20,9 @@ public class Library
 
     public void loadMasterLibrary(Context c) throws IOException
     {
+        /****************************************************************************************
+         * NGL, I felt pretty smart for realising I could save all local deck object to one file
+         ****************************************************************************************/
         Gson gson = new Gson();
         Log.d("THIS ACTIVITY", "You called getMasterLibrary, this function will cause the" +
                 " program to crash if no file named masterLibrary.txt exists at /data/user/0/com.example.flashdashpersonal/files/masterLibrary.txt");
