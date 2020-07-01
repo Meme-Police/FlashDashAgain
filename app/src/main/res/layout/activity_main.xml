@@ -17,60 +17,62 @@
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
         android:layout_marginBottom="639dp"
-        android:background="?android:attr/textColorHighlightInverse"
-        android:fontFamily="@font/baloo"
-        android:text="FLASH"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@android:color/background_light"
-        android:textSize="50sp"
+        android:text="@string/flash"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.468" />
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="57dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginLeft="9dp"
-        android:layout_marginTop="250dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="150dp"
-        app:layout_constraintBottom_toTopOf="@+id/Dash"
-        app:layout_constraintEnd_toStartOf="@+id/Dash"
-        app:layout_constraintHorizontal_bias="0.636"
-        app:layout_constraintStart_toEndOf="@+id/Flash"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.481"
-        app:srcCompat="@mipmap/ic_launcher_foreground"
-        android:contentDescription="TODO" />
-
-    <TextView
-        android:id="@+id/Dash"
-        android:layout_width="143dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginLeft="38dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginRight="75dp"
-        android:layout_marginBottom="64dp"
-        android:fontFamily="@font/baloo"
-        android:text="DASH"
+        app:layout_constraintVertical_bias="0.468"
+        android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@android:color/background_light"
         android:textSize="50sp"
-        app:layout_constraintBottom_toTopOf="@+id/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.416"
-        app:layout_constraintStart_toEndOf="@+id/Flash"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.083" />
+        android:fontFamily="@font/baloo"
+        />
+
+       <ImageView
+           android:id="@+id/logo"
+           android:layout_width="57dp"
+           android:layout_height="63dp"
+           android:layout_marginStart="9dp"
+           android:layout_marginLeft="9dp"
+           android:layout_marginTop="250dp"
+           android:layout_marginEnd="7dp"
+           android:layout_marginRight="7dp"
+           android:layout_marginBottom="150dp"
+           app:layout_constraintBottom_toTopOf="@+id/Dash"
+           app:layout_constraintEnd_toStartOf="@+id/Dash"
+           app:layout_constraintHorizontal_bias="0.636"
+           app:layout_constraintStart_toEndOf="@+id/Flash"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintVertical_bias="0.481"
+           app:srcCompat="@mipmap/ic_launcher_foreground"
+           android:contentDescription="TODO"
+           tools:ignore="VectorDrawableCompat" />
+
+
+           <TextView
+               android:id="@+id/Dash"
+               android:layout_width="143dp"
+               android:layout_height="82dp"
+               android:layout_marginStart="38dp"
+               android:layout_marginLeft="38dp"
+               android:layout_marginTop="37dp"
+               android:layout_marginEnd="75dp"
+               android:layout_marginRight="75dp"
+               android:layout_marginBottom="64dp"
+               android:fontFamily="@font/baloo"
+               android:text="DASH"
+               android:textAppearance="@style/TextAppearance.AppCompat.Large"
+               android:textColor="@android:color/background_light"
+               android:textSize="50sp"
+               app:layout_constraintBottom_toTopOf="@+id/logo"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.416"
+               app:layout_constraintStart_toEndOf="@+id/Flash"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintVertical_bias="0.083" />
 
     <Button
         android:id="@+id/importDeckButton"
@@ -95,7 +97,6 @@
 
     <Button
         android:id="@+id/newDeckButton"
-
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_marginStart="80dp"
@@ -111,12 +112,11 @@
         android:textColor="#FFFFFF"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/importDeckButton"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.882"
         app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/libraryButton" />
+        app:layout_constraintTop_toBottomOf="@+id/libraryButton"
+        />
 
     <Button
         android:id="@+id/libraryButton"
@@ -130,7 +130,6 @@
         android:layout_marginBottom="10dp"
         android:background="#a9a9a9"
         android:fontFamily="@font/baloo"
-
         android:text="Library"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
@@ -139,8 +138,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/Flash" />
+        app:layout_constraintTop_toBottomOf="@+id/Flash"
+        />
 
 
 

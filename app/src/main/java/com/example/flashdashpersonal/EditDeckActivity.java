@@ -11,16 +11,8 @@ import android.widget.EditText;
 
 import com.google.gson.Gson;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.nio.Buffer;
 
 public class EditDeckActivity extends AppCompatActivity {
 
@@ -32,7 +24,7 @@ public class EditDeckActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_deck);
-        EditText editDeckName = findViewById(R.id.editText);
+        EditText editDeckName = findViewById(R.id.deckName);
         Intent sentIntent = this.getIntent();
         // This gets the Deck object sent by the previous activity through a Json string
         Deck compareDeck = gson.fromJson(sentIntent.getStringExtra("DECK"), Deck.class);
