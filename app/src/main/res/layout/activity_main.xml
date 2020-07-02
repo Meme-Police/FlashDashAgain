@@ -85,6 +85,7 @@
         android:layout_marginRight="81dp"
         android:background="#a9a9a9"
         android:fontFamily="@font/baloo"
+        android:onClick="NewDeckActivity"
         android:text="Edit Decks"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
