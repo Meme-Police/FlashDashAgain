@@ -2,4 +2,16 @@
     <string name="app_name">FLashDashPersonal</string>
     <string name="flash">FLASH</string>
     <string name="Dash">DASH</string>
+    <string name="lightning_bolt">TODO</string>
+    <string name="study">Study</string>
+    <string name="edit_decks">Edit Decks</string>
+    <string name="deck_name">Deck Name</string>
+    <string name="side_one">Side One</string>
+    <string name="side_two">Side Two</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="add_card">Add Card</string>
+    <string name="edit_deck">Edit Deck</string>
+    <string name="import_deck">Import Deck</string>
+    <string name="create_deck">Create Deck</string>
 </resources>
