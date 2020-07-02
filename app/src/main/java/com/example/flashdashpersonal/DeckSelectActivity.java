@@ -72,10 +72,27 @@ public class DeckSelectActivity extends AppCompatActivity {
     public void startActivityWithDeck(int index)
     {
         Intent originalActivity = this.getIntent();
-        String intendedActivity = originalActivity.getStringExtra("nextActivity");
-        Intent intent = new Intent (this, EditDeckActivity.class);
-        intent.putExtra("DECK", gson.toJson(localLibrary.deckList.get(index)));
-        startActivity(intent);
+        Integer intendedActivity = originalActivity.getIntExtra("nextActivity", 0);
+
+        if (intendedActivity == 1)
+        {
+            Log.d("ALL", "Edit Deck iff statement triggered");
+            Intent intent = new Intent(this, EditDeckActivity.class);
+            intent.putExtra("DECK", gson.toJson(localLibrary.deckList.get(index)));
+            startActivity(intent);
+        }
+
+        if (intendedActivity == 2)
+        {
+            // fill in the [blanks] and remove the comment box
+            /**************************************************************************
+             * Intent intent = new Intent(this, "PlayDeck".class);
+             * intent.putExtra("DECK", gson.toJson(localLibrary.deckList.get(index)));
+             * startActivity(Intent)
+             *************************************************************************/
+            // its like madlibs but its code
+        }
+
     }
 
 }

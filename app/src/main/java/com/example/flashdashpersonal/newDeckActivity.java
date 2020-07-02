@@ -56,11 +56,11 @@ public class newDeckActivity extends AppCompatActivity {
     {
 
         Log.d("ALL", "Edit Deck Called");
-         Intent intent = new Intent(this, DeckSelectActivity.class);
-         intent.putExtra("nextActivity", "EditDeckActivity");
+        Intent intent = new Intent(this, DeckSelectActivity.class);
+        intent.putExtra("nextActivity",  1);
 
         Log.d("ALL", "About to start DeckSelect");
-         startActivity(intent);
+        startActivity(intent);
 
          // We don't need this since we will be starting this activity from the DeckSelectActivity
          // startDeckEditorActivity(deck);
