@@ -8,7 +8,7 @@
     tools:context=".newDeckActivity">
 
     <TextView
-        android:id="@+id/MainLogo"
+        android:id="@+id/Flash"
         android:layout_width="157dp"
         android:layout_height="84dp"
         android:layout_marginStart="35dp"
@@ -17,9 +17,8 @@
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
         android:layout_marginBottom="639dp"
-        android:background="?android:attr/textColorHighlightInverse"
         android:fontFamily="@font/baloo"
-        android:text="FLASH"
+        android:text="@string/flash"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@android:color/background_light"
@@ -35,23 +34,25 @@
         android:id="@+id/logo"
         android:layout_width="57dp"
         android:layout_height="63dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginBottom="203dp"
-        app:layout_constraintBottom_toTopOf="@+id/newDeckButton"
-        app:layout_constraintEnd_toStartOf="@+id/textView5"
-        app:layout_constraintHorizontal_bias="0.675"
-        app:layout_constraintStart_toEndOf="@+id/MainLogo"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="150dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toTopOf="@+id/Dash"
+        app:layout_constraintEnd_toStartOf="@+id/Dash"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toEndOf="@+id/Flash"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.481"
         app:srcCompat="@mipmap/ic_launcher_foreground"
         tools:ignore="VectorDrawableCompat" />
 
+
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/Dash"
         android:layout_width="143dp"
         android:layout_height="82dp"
         android:layout_marginStart="38dp"
@@ -68,9 +69,10 @@
         app:layout_constraintBottom_toTopOf="@+id/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.416"
-        app:layout_constraintStart_toEndOf="@+id/MainLogo"
+        app:layout_constraintStart_toEndOf="@+id/Flash"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.083" />
+
 
     <Button
         android:id="@+id/addCard"
@@ -90,9 +92,9 @@
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/saveDeck"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createDeck" />
-
 
     <Button
         android:id="@+id/saveDeck"
@@ -121,10 +123,10 @@
         android:layout_height="53dp"
         android:layout_marginStart="77dp"
         android:layout_marginLeft="77dp"
-        android:layout_marginTop="169dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="78dp"
         android:layout_marginRight="78dp"
-        android:layout_marginBottom="6dp"
+        android:layout_marginBottom="9dp"
         android:background="#a9a9a9"
         android:fontFamily="@font/baloo"
         android:text="Create Deck"
@@ -134,6 +136,6 @@
         app:layout_constraintBottom_toTopOf="@+id/addCard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MainLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/Flash" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
