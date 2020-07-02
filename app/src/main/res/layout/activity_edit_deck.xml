@@ -73,21 +73,66 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.083" />
 
+
+    <EditText
+        android:id="@+id/sideTwo"
+        android:layout_width="254dp"
+        android:layout_height="131dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginRight="75dp"
+        android:background="#a9a9a9"
+        android:ems="10"
+        android:fontFamily="@font/baloo"
+        android:gravity="center_horizontal"
+        android:inputType="textPersonName"
+        android:text="Side Two"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sideOne" />
+
+    <EditText
+        android:id="@+id/deckName"
+        android:layout_width="296dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginLeft="57dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginRight="58dp"
+        android:layout_marginBottom="16dp"
+        android:background="#a9a9a9"
+        android:ems="10"
+        android:fontFamily="@font/baloo"
+        android:inputType="textPersonName"
+        android:text="Deck Name"
+        android:textColor="#FFFFFF"
+        android:textSize="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Flash" />
+
     <Spinner
         android:id="@+id/cardList"
         android:layout_width="296dp"
         android:layout_height="52dp"
         android:layout_marginStart="57dp"
         android:layout_marginLeft="57dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="58dp"
         android:layout_marginRight="58dp"
-        android:layout_marginBottom="200dp"
         android:background="#a9a9a9"
         android:fontFamily="@font/baloo"
         android:textColor="#FFFFFF"
+        android:textSize="27dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Flash" />
 
@@ -111,30 +156,51 @@
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/sideTwo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardList" />
 
-
-    <EditText
-        android:id="@+id/sideTwo"
-        android:layout_width="254dp"
-        android:layout_height="131dp"
-        android:layout_marginStart="82dp"
-        android:layout_marginLeft="82dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginRight="75dp"
+    <Button
+        android:id="@+id/saveDeck"
+        android:layout_width="105dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginBottom="107dp"
         android:background="#a9a9a9"
-        android:ems="10"
         android:fontFamily="@font/baloo"
-        android:gravity="center_horizontal"
-        android:inputType="textPersonName"
-        android:text="Side Two"
+        android:text="Save"
         android:textColor="#FFFFFF"
-        android:textSize="30dp"
+        android:textSize="23dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/deleteCard"
+        app:layout_constraintTop_toBottomOf="@+id/sideTwo"
+        app:layout_constraintVertical_bias="0.115" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="105dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="107dp"
+        android:background="#a9a9a9"
+        android:fontFamily="@font/baloo"
+        android:text="Add Card"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/deleteCard"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sideOne" />
+        app:layout_constraintTop_toBottomOf="@+id/sideTwo"
+        app:layout_constraintVertical_bias="0.115" />
 
     <Button
         android:id="@+id/deleteCard"
@@ -155,47 +221,9 @@
         app:layout_constraintEnd_toStartOf="@+id/saveDeck"
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/sideTwo"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.115" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="105dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginLeft="38dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="107dp"
-        android:background="#a9a9a9"
-        android:fontFamily="@font/baloo"
-        android:text="Add Card"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/deleteCard"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sideTwo" />
 
-    <Button
-        android:id="@+id/saveDeck"
-        android:layout_width="105dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginRight="33dp"
-        android:layout_marginBottom="107dp"
-        android:background="#a9a9a9"
-        android:fontFamily="@font/baloo"
-        android:text="Save"
-        android:textColor="#FFFFFF"
-        android:textSize="23dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/deleteCard"
-        app:layout_constraintTop_toBottomOf="@+id/sideTwo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
