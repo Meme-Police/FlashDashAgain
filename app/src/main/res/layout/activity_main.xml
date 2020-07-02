@@ -75,27 +75,6 @@
                app:layout_constraintVertical_bias="0.083" />
 
     <Button
-        android:id="@+id/importDeckButton"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="81dp"
-        android:layout_marginRight="81dp"
-        android:layout_marginBottom="183dp"
-        android:background="#a9a9a9"
-        android:fontFamily="@font/baloo"
-        android:text="Import Deck"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newDeckButton" />
-
-    <Button
         android:id="@+id/newDeckButton"
         android:layout_width="250dp"
         android:layout_height="60dp"
@@ -104,19 +83,16 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="81dp"
         android:layout_marginRight="81dp"
-        android:layout_marginBottom="12dp"
         android:background="#a9a9a9"
         android:fontFamily="@font/baloo"
-        android:text="New Deck"
+        android:text="Edit Decks"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/importDeckButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.882"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/libraryButton"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/libraryButton" />
 
     <Button
         android:id="@+id/libraryButton"
@@ -130,7 +106,7 @@
         android:layout_marginBottom="10dp"
         android:background="#a9a9a9"
         android:fontFamily="@font/baloo"
-        android:text="Library"
+        android:text="Study"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="30dp"
@@ -138,8 +114,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Flash"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/Flash" />
 
 
 
