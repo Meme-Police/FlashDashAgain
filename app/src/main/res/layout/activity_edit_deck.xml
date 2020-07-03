@@ -130,6 +130,7 @@
         android:layout_marginTop="160dp"
         android:background="#a9a9a9"
         android:fontFamily="@font/baloo"
+        android:onClick="saveDeck"
         android:text="@string/save"
         android:textColor="#FFFFFF"
         android:textSize="23sp"
