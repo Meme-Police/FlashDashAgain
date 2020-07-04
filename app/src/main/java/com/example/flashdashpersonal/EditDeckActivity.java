@@ -29,6 +29,7 @@ public class EditDeckActivity extends AppCompatActivity {
     Spinner spinner;
     Integer cardNumber;
     public String[] cardNames;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
