@@ -76,6 +76,7 @@ public class DeckSelectActivity extends AppCompatActivity {
         Intent intent = new Intent (this, EditDeckActivity.class);
         intent.putExtra("DECK", gson.toJson(localLibrary.deckList.get(index)));
         startActivity(intent);
+        finish();
     }
 
 }
