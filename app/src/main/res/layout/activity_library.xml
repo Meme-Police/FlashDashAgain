@@ -4,27 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".newDeckActivity">
-
+    tools:context=".newDeckActivity"
+    android:background="@android:color/holo_blue_dark">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="230dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
-        android:layout_marginBottom="639dp"
-        android:autoText="true"
-        android:background="#FFFFFF"
-        android:text="Deck Library"
-        android:textSize="45sp"
+        android:id="@+id/Flash"
+        android:layout_width="157dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/baloo"
+        android:text="@string/flash"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/background_light"
+        android:textSize="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="57dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginLeft="176dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/lightning_bolt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_foreground"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/Dash"
+        android:layout_width="143dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginLeft="184dp"
+        android:fontFamily="@font/baloo"
+        android:text="@string/Dash"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/background_light"
+        android:textSize="50sp"
+        app:layout_constraintStart_toStartOf="@+id/Flash"
+        app:layout_constraintTop_toTopOf="@+id/Flash" />
+
+    <ListView
+        android:layout_width="308dp"
+        android:layout_height="535dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginRight="57dp"
+        android:layout_marginBottom="66dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/Flash" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

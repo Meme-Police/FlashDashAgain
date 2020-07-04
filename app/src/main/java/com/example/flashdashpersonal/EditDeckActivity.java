@@ -8,31 +8,30 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.nio.Buffer;
 
 public class EditDeckActivity extends AppCompatActivity {
 
     Deck deck;
     Gson gson = new Gson();
     String fileName = "localDeckLibrary.txt";
+    EditText editDeckName;
+    EditText editSide1;
+    EditText editSide2;
+    Integer cardNumber;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_deck);
-        EditText editDeckName = findViewById(R.id.editText);
+        editDeckName = findViewById(R.id.deckName);
+        editSide1 = findViewById(R.id.sideOne);
+        editSide2 = findViewById(R.id.sideTwo);
         Intent sentIntent = this.getIntent();
         // This gets the Deck object sent by the previous activity through a Json string
         Deck compareDeck = gson.fromJson(sentIntent.getStringExtra("DECK"), Deck.class);
@@ -40,13 +39,48 @@ public class EditDeckActivity extends AppCompatActivity {
             deck = compareDeck;
         else if (compareDeck == null)
             deck = new Deck();
-        editDeckName.setText(deck.deckName);
+
+
+        // basically my idea here is to
+        if (deck.deck.size() == 0)
+        {
+            cardNumber = -1;
+            loadCard(cardNumber);
+        }
+        else if (deck.deck.size() > 0)
+        {
+            cardNumber = 0;
+            loadCard(cardNumber);
+        }
     }
 
+    public void loadCard(int i)
+    {
+        if (cardNumber >= 0) {
+            editDeckName.setText(deck.deckName);
+            editSide1.setText(deck.deck.get(i).side1);
+            editSide2.setText(deck.deck.get(i).side2);
+        }
+        else if (cardNumber == -1)
+        {
+          cardNumber = 0;
+          deck.deck.add(new Card());
+        }
+    }
+
+    public void saveCard(int i)
+    {
+        Card tempCard = new Card();
+        deck.deckName = editDeckName.getText().toString();
+        tempCard.side1 = editSide1.getText().toString();
+        tempCard.side2 = editSide2.getText().toString();
+        deck.deck.set(i, tempCard);
+    }
 
 
     public void saveDeck(View view) throws IOException
     {
+        saveCard(cardNumber);
         Library masterLibrary = new Library();
         masterLibrary.loadMasterLibrary(getApplicationContext());
 
