@@ -14,9 +14,7 @@ import java.util.List;
 
 public class Library
 {
-    List<Deck> deckList = new ArrayList<Deck>();
-
-
+    public List<Deck> deckList = new ArrayList<Deck>();
 
     public void loadMasterLibrary(Context c) throws IOException
     {
