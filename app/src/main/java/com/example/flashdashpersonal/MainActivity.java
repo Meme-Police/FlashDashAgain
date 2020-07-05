@@ -50,9 +50,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void StartLibraryActivity(View view)
+    public void StartPlayActivity(View view)
     {
-        Intent intent = new Intent(this, LibraryActivity.class);
+        Intent intent = new Intent(this, DeckSelectActivity.class);
+        intent.putExtra("nextActivity", "PlayDeckActivity");
         startActivity(intent);
     }
 }
