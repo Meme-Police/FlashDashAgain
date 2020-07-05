@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -43,7 +44,7 @@ public class PlayDeckActivity extends AppCompatActivity {
         cardView1.setText(playDeck.deck.get(position).side2);
     }
 
-    public void flipCard() {
+    public void flipCard(View view) {
         if (!isFlipped) {
             initCard2();
             isFlipped = true;
@@ -54,7 +55,7 @@ public class PlayDeckActivity extends AppCompatActivity {
         }
     }
 
-    public void previousCard() {
+    public void previousCard(View view) {
         if (position > 0) {
             position -= 1;
             initCard1();
@@ -65,7 +66,7 @@ public class PlayDeckActivity extends AppCompatActivity {
         }
     }
 
-    public void nextCard() {
+    public void nextCard(View view) {
         if (position >= 0 && position < playDeck.deck.size() - 1) {
             position += 1;
             initCard1();

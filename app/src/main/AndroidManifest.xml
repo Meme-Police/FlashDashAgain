@@ -12,6 +12,7 @@
         <activity android:name=".DeckSelectActivity" />
         <activity android:name=".EditDeckActivity" />
         <activity android:name=".newDeckActivity" />
+        <activity android:name=".PlayDeckActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
