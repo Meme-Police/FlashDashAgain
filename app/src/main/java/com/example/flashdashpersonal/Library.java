@@ -47,9 +47,9 @@ public class Library
                 masterLibraryString = gson.toJson(new Library());
             }
             inputStream.close();
-            Log.d("ALL", stringBuilder.toString());
+            Log.d("ALL", masterLibraryString);
             Log.d("ALL", "Is the fileString behind me?");
-            masterLibrary = gson.fromJson(stringBuilder.toString(), Library.class);
+            masterLibrary = gson.fromJson(masterLibraryString, Library.class);
         }
         else if (inputStream == null)
         {
