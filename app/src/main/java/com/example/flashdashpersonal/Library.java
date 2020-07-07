@@ -14,9 +14,7 @@ import java.util.List;
 
 public class Library
 {
-    List<Deck> deckList = new ArrayList<Deck>();
-
-
+    public List<Deck> deckList = new ArrayList<Deck>();
 
     public void loadMasterLibrary(Context c) throws IOException
     {
@@ -24,27 +22,42 @@ public class Library
          * NGL, I felt pretty smart for realising I could save all local deck object to one file
          ****************************************************************************************/
         Gson gson = new Gson();
-        Log.d("THIS ACTIVITY", "You called getMasterLibrary, this function will cause the" +
+        Log.d("ALL", "You called getMasterLibrary, this function will cause the" +
                 " program to crash if no file named masterLibrary.txt exists at /data/user/0/com.example.flashdashpersonal/files/masterLibrary.txt");
         Library masterLibrary = null;
         InputStream inputStream = c.openFileInput("localDeckLibrary.txt");
-        Log.d("THIS ACTIVITY", "file exists or was created");
+        Log.d("ALL", "file exists or was created");
 
         if (inputStream != null) {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
             StringBuilder stringBuilder = new StringBuilder();
             String currentLine;
+            String masterLibraryString;
+            Log.d("ALL", "Built bufferedreader and stringbuilder");
 
             while ((currentLine = bufferedReader.readLine()) != null)
             {
+                Log.d("ALL", "Stringbuilder ran one time");
                 stringBuilder.append(currentLine + "\n");
             }
-
+            masterLibraryString = stringBuilder.toString();
+            if (bufferedReader.readLine() == null)
+            {
+                Log.d("ALL", "It's all null? Always has been");
+                masterLibraryString = gson.toJson(new Library());
+            }
             inputStream.close();
+            Log.d("ALL", stringBuilder.toString());
+            Log.d("ALL", "Is the fileString behind me?");
             masterLibrary = gson.fromJson(stringBuilder.toString(), Library.class);
+        }
+        else if (inputStream == null)
+        {
+            Log.d("ALL", "guess inputstream is null");
         }
 
         deckList = masterLibrary.deckList;
+        Log.d("ALL", "decklist set from masterlibrary");
     }
 
 }

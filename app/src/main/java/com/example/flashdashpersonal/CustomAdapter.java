@@ -2,6 +2,7 @@ package com.example.flashdashpersonal;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,7 @@ public class CustomAdapter extends ArrayAdapter {
         View rowView = inflater.inflate(R.layout.deck_list_item, null, true);
         TextView deckName = (TextView) rowView.findViewById(R.id.deckNameID);
         deckName.setText(deckNames[iterator]);
+        Log.d("ALL", "CustomAddapter getView called");
 
         return rowView;
     }

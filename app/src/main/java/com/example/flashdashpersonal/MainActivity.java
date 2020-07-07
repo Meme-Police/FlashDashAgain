@@ -26,20 +26,20 @@ public class MainActivity extends AppCompatActivity {
     {
         File file = new File(getApplicationContext().getFilesDir(), fileName );
         boolean fileCreated = false;
-
+        Log.d("ALL", file.toString());
         try {
             fileCreated = file.createNewFile();
         } catch (IOException e) {
-            Log.d("THIS ACTIVITY", "Error while creating file " + e);
+            Log.d("ALL", "Error while creating file " + e);
             e.printStackTrace();
         }
 
         if (fileCreated) {
-            Log.d("THIS ACTIVITY", "File Created at " + file.getPath());
+            Log.d("ALL", "File Created at " + file.getPath());
         }
         
         else {
-            Log.d("THIS ACTIVITY", "File already exists");
+            Log.d("ALL", "File already exists");
         }
 
     }
@@ -47,6 +47,13 @@ public class MainActivity extends AppCompatActivity {
     public void NewDeckActivity(View view)
     {
         Intent intent = new Intent(this, newDeckActivity.class);
+        startActivity(intent);
+    }
+
+    public void playDeckActivity(View view)
+    {
+        Intent intent = new Intent(this, DeckSelectActivity.class);
+        intent.putExtra("nextActivity", "PlayDeckActivity");
         startActivity(intent);
     }
 
