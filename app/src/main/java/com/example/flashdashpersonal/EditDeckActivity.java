@@ -22,7 +22,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.nio.Buffer;
 
-public class EditDeckActivity extends AppCompatActivity {
+public class
+EditDeckActivity extends AppCompatActivity {
 
     Deck deck;
     Gson gson = new Gson();

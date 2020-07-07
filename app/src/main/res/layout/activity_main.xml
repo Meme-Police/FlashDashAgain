@@ -106,16 +106,17 @@
         android:layout_marginBottom="12dp"
         android:background="#a9a9a9"
         android:fontFamily="@font/baloo"
+        android:onClick="NewDeckActivity"
         android:text="New Deck"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/importDeckButton"
 
+        app:layout_constraintBottom_toTopOf="@+id/importDeckButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.882"
-        app:layout_constraintStart_toStartOf="parent"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/libraryButton" />
 
     <Button
@@ -131,6 +132,7 @@
         android:background="#a9a9a9"
         android:fontFamily="@font/baloo"
 
+        android:onClick="StartLibraryActivity"
         android:text="Library"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
@@ -138,8 +140,8 @@
         app:layout_constraintBottom_toTopOf="@+id/newDeckButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Flash" />
 
 
