@@ -61,10 +61,10 @@
         android:background="#a9a9a9"
         android:fontFamily="@font/baloo"
         android:onClick="NewDeckActivity"
+
         android:text="@string/edit_decks"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/libraryButton" />
 
@@ -77,6 +77,7 @@
         android:layout_marginTop="140dp"
         android:background="#a9a9a9"
         android:fontFamily="@font/baloo"
+
         android:onClick="playDeckActivity"
         android:text="@string/study"
         android:textAllCaps="false"
@@ -84,6 +85,7 @@
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

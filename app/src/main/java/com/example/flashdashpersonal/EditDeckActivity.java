@@ -18,7 +18,8 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
-public class EditDeckActivity extends AppCompatActivity {
+public class
+EditDeckActivity extends AppCompatActivity {
 
     Deck deck;
     Gson gson = new Gson();
@@ -156,7 +157,7 @@ public class EditDeckActivity extends AppCompatActivity {
 
 
 
-    public void saveDeck(View view) throws IOException
+    public void saveDeck/*I can do whatever I want*/(View view) throws IOException
     {
         saveCard(cardNumber);
         Boolean deckAlreadyExist = false;
