@@ -24,6 +24,8 @@
             android:layout_height="60dp"
             android:background="#a9a9a9"
             android:fontFamily="@font/baloo"
+            android:paddingLeft="35dp"
+            android:paddingTop="5dp"
             android:text="TextView"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"

@@ -151,12 +151,6 @@ EditDeckActivity extends AppCompatActivity {
     }
 
 
-    /**CustomAdapter arrayAdapter = new CustomAdapter(this, cardNames);
-    spinner.setAdapter(arrayAdapter);
-     **/
-
-
-
     public void saveDeck/*I can do whatever I want*/(View view) throws IOException
     {
         saveCard(cardNumber);
