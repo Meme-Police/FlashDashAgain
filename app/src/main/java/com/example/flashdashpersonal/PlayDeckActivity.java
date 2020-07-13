@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -19,6 +20,7 @@ public class PlayDeckActivity extends AppCompatActivity {
     public TextView deckName;
     public Gson gson;
     boolean isFlipped = false;
+    boolean finishedDeck;
     int position = 0;
 
     @Override
@@ -33,7 +35,7 @@ public class PlayDeckActivity extends AppCompatActivity {
         playDeck = gson.fromJson(sentIntent.getStringExtra("DECK"), Deck.class);
 
         initCard1();
-        deckName.setText("DECK");
+        deckName.setText(playDeck.deckName);
     }
 
     public void initCard1(){
@@ -70,10 +72,24 @@ public class PlayDeckActivity extends AppCompatActivity {
         if (position >= 0 && position < playDeck.deck.size() - 1) {
             position += 1;
             initCard1();
+            if (position == playDeck.deck.size() - 1) {
+                finishedDeck = true;
+                return;
+            }
         }
         else {
             position = position;
             initCard1();
+        }
+
+        if (finishedDeck) {
+            Toast.makeText(this, "Desk finished", Toast.LENGTH_SHORT);
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            finish();
         }
     }
 }

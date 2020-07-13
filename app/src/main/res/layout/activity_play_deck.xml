@@ -90,11 +90,14 @@
         android:id="@+id/deckLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginLeft="128dp"
-        android:layout_marginTop="52dp"
-        android:text="Deck Name"
-        android:textSize="30sp"
+        android:layout_marginStart="136dp"
+        android:layout_marginLeft="136dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/baloo"
+        android:text="Deck"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/background_light"
+        android:textSize="35sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
@@ -104,10 +107,15 @@
         android:layout_height="200dp"
         android:layout_marginStart="52dp"
         android:layout_marginLeft="52dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="8dp"
+        android:background="#A9A9A9"
+        android:padding="20dp"
         android:text="cardView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/background_light"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deckLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/deckLabel"
+        tools:fontFamily="@font/baloo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
