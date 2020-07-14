@@ -83,7 +83,7 @@ public class DeckSelectActivity extends AppCompatActivity {
             finish();
         }
         else if (intendedActivity.equals("PlayDeckActivity")){
-            intent = new Intent(this, PlayDeckActivity.class);
+            intent = new Intent(this, ModeSelectActivity.class);
             intent.putExtra("DECK", gson.toJson(localLibrary.deckList.get(index)));
             startActivity(intent);
             finish();
