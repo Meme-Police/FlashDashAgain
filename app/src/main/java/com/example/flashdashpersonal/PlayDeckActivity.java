@@ -19,6 +19,7 @@ public class PlayDeckActivity extends AppCompatActivity {
     public TextView cardView1;
     public TextView deckName;
     public Gson gson;
+    String gameMode;
     boolean isFlipped = false;
     boolean finishedDeck;
     int position = 0;
@@ -33,14 +34,20 @@ public class PlayDeckActivity extends AppCompatActivity {
         deckName = findViewById(R.id.deckLabel);
         Intent sentIntent = this.getIntent();
         playDeck = gson.fromJson(sentIntent.getStringExtra("DECK"), Deck.class);
+        gameMode = sentIntent.getStringExtra("GAME_MODE");
 
-        initCard1();
+        if (gameMode.equals("reverse"))
+        {
+            initCard2();
+        }
+        else
+        {
+            initCard1();
+        }
         deckName.setText(playDeck.deckName);
     }
 
-    public void initCard1(){
-        cardView1.setText(playDeck.deck.get(position).side1);
-    }
+    public void initCard1(){ cardView1.setText(playDeck.deck.get(position).side1); }
 
     public void initCard2() {
         cardView1.setText(playDeck.deck.get(position).side2);
@@ -61,6 +68,7 @@ public class PlayDeckActivity extends AppCompatActivity {
         if (position > 0) {
             position -= 1;
             initCard1();
+            isFlipped = false;
         }
         else if (position == 0) {
             position = position;
@@ -71,7 +79,18 @@ public class PlayDeckActivity extends AppCompatActivity {
     public void nextCard(View view) {
         if (position >= 0 && position < playDeck.deck.size() - 1) {
             position += 1;
-            initCard1();
+            if (gameMode.equals("reverse"))
+            {
+                initCard2();
+                isFlipped = true;
+            }
+            else
+            {
+                initCard1();
+                isFlipped = false;
+            }
+
+
             if (position == playDeck.deck.size() - 1) {
                 finishedDeck = true;
                 return;
@@ -83,12 +102,8 @@ public class PlayDeckActivity extends AppCompatActivity {
         }
 
         if (finishedDeck) {
-            Toast.makeText(this, "Desk finished", Toast.LENGTH_SHORT);
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            Toast.makeText(this, "Desk finished", Toast.LENGTH_SHORT).show();
+
             finish();
         }
     }
