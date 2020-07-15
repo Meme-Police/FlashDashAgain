@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 
 import java.io.IOException;
+import java.util.Random;
 
 public class PlayDeckActivity extends AppCompatActivity {
 
@@ -23,6 +24,7 @@ public class PlayDeckActivity extends AppCompatActivity {
     boolean isFlipped = false;
     boolean finishedDeck;
     int position = 0;
+    Random random;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +37,15 @@ public class PlayDeckActivity extends AppCompatActivity {
         Intent sentIntent = this.getIntent();
         playDeck = gson.fromJson(sentIntent.getStringExtra("DECK"), Deck.class);
         gameMode = sentIntent.getStringExtra("GAME_MODE");
+        random = new Random();
 
         if (gameMode.equals("reverse"))
         {
             initCard2();
+        }
+        else if (gameMode.equals("random"))
+        {
+            random();
         }
         else
         {
@@ -51,6 +58,20 @@ public class PlayDeckActivity extends AppCompatActivity {
 
     public void initCard2() {
         cardView1.setText(playDeck.deck.get(position).side2);
+    }
+
+    public void random()
+    {
+        if (random.nextBoolean())
+        {
+            initCard1();
+            isFlipped = false;
+        }
+        else
+        {
+            initCard2();
+            isFlipped = true;
+        }
     }
 
     public void flipCard(View view) {
@@ -84,6 +105,10 @@ public class PlayDeckActivity extends AppCompatActivity {
                 initCard2();
                 isFlipped = true;
             }
+            else if (gameMode.equals("random"))
+            {
+                random();
+            }
             else
             {
                 initCard1();
@@ -91,7 +116,8 @@ public class PlayDeckActivity extends AppCompatActivity {
             }
 
 
-            if (position == playDeck.deck.size() - 1) {
+            if (position == playDeck.deck.size() - 1)
+            {
                 finishedDeck = true;
                 return;
             }

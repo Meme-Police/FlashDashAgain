@@ -89,6 +89,7 @@
         android:layout_marginTop="24dp"
         android:background="#a9a9a9"
         android:fontFamily="@font/baloo"
+        android:onClick="startRandom"
         android:text="Random Order"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"

@@ -40,4 +40,12 @@ public class ModeSelectActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    public void startRandom(View view)
+    {
+        Intent intent = new Intent(this, PlayDeckActivity.class);
+        intent.putExtra("DECK", deck);
+        intent.putExtra("GAME_MODE", "random");
+        startActivity(intent);
+        finish();
+    }
 }

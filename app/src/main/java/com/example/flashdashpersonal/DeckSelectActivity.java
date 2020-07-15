@@ -117,8 +117,18 @@ public class DeckSelectActivity extends AppCompatActivity {
                 }
             });
 
+
+
             AlertDialog deleteAlert = alert.create();
             deleteAlert.show();
+
+        }
+        else if(intendedActivity.equals("Export"))
+        {
+                Intent share = new Intent(Intent.ACTION_SEND);
+                share.putExtra(Intent.EXTRA_TEXT, gson.toJson(localLibrary.deckList.get(index)));
+                share.setType("text/plain");
+                startActivity(share);
 
         }
 
