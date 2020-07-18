@@ -129,7 +129,6 @@ public class DeckSelectActivity extends AppCompatActivity {
                 share.putExtra(Intent.EXTRA_TEXT, gson.toJson(localLibrary.deckList.get(index)));
                 share.setType("text/plain");
                 startActivity(share);
-
         }
 
     }

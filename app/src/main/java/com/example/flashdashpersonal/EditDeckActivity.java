@@ -125,8 +125,14 @@ EditDeckActivity extends AppCompatActivity {
     public void deleteCard(View view)
     {
         // if you delete the last card it might crash the program, but I don't want to deal with it right now
-        Log.d("ALL", "Deleting: " + cardNumber.toString());
+        if (cardNumber == deck.deck.size() - 1)
+        {
+            loadCard(0);
+            deck.deck.remove((int)cardNumber);
+            cardNumber = 0;
+        }
         deck.deck.remove((int)cardNumber);
+        Log.d("ALL", "Deleting: " + cardNumber.toString());
         loadSpinner();
         loadCard(cardNumber);
     }

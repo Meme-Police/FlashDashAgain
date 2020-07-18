@@ -13,6 +13,7 @@ import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.util.Random;
+import java.util.Collections;
 
 public class PlayDeckActivity extends AppCompatActivity {
 
@@ -24,6 +25,7 @@ public class PlayDeckActivity extends AppCompatActivity {
     boolean isFlipped = false;
     boolean finishedDeck;
     int position = 0;
+    int order[];
     Random random;
 
     @Override
@@ -45,6 +47,7 @@ public class PlayDeckActivity extends AppCompatActivity {
         }
         else if (gameMode.equals("random"))
         {
+            Collections.shuffle(playDeck.deck);
             random();
         }
         else
