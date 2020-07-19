@@ -55,16 +55,16 @@
         android:id="@+id/newDeckButton"
         android:layout_width="250dp"
         android:layout_height="60dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
         android:layout_marginTop="24dp"
         android:background="#a9a9a9"
         android:fontFamily="@font/baloo"
         android:onClick="NewDeckActivity"
 
-        android:text="@string/edit_decks"
+        android:text="Manage Decks"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/libraryButton" />
 
@@ -72,8 +72,6 @@
         android:id="@+id/libraryButton"
         android:layout_width="250dp"
         android:layout_height="60dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
         android:layout_marginTop="140dp"
         android:background="#a9a9a9"
         android:fontFamily="@font/baloo"
@@ -83,6 +81,7 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 

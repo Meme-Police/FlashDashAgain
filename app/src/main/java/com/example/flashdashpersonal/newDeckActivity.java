@@ -41,6 +41,20 @@ public class newDeckActivity extends AppCompatActivity {
     Deck deck = new Deck();
     Gson gson = new Gson();
 
+    public void deleteDeck(View view)
+    {
+        Intent intent = new Intent(this, DeckSelectActivity.class);
+        intent.putExtra("nextActivity", "DeleteDeck");
+        startActivity(intent);
+    }
+
+    public void saveDeck(View view)
+    {
+        Intent intent = new Intent(this, DeckSelectActivity.class);
+        intent.putExtra("nextActivity", "Export");
+        startActivity(intent);
+    }
+
     // "Import Deck" button
     public void literallyMagic(View view)
     {

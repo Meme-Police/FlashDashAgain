@@ -6,9 +6,11 @@ import android.util.Log;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,8 +28,6 @@ public class Library
                 " program to crash if no file named masterLibrary.txt exists at /data/user/0/com.example.flashdashpersonal/files/masterLibrary.txt");
         Library masterLibrary = null;
         InputStream inputStream = c.openFileInput("localDeckLibrary.txt");
-        Log.d("ALL", "file exists or was created");
-
         if (inputStream != null) {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
             StringBuilder stringBuilder = new StringBuilder();
@@ -58,6 +58,15 @@ public class Library
 
         deckList = masterLibrary.deckList;
         Log.d("ALL", "decklist set from masterlibrary");
+    }
+
+    public void saveLibrary(Context c) throws IOException {
+        Gson gson = new Gson();
+        String fileName = "localDeckLibrary.txt";
+        String newMasterLibraryString = gson.toJson(this);
+        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(c.openFileOutput(fileName, Context.MODE_PRIVATE));
+        outputStreamWriter.write(newMasterLibraryString);
+        outputStreamWriter.close();
     }
 
 }
