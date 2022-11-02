@@ -41,15 +41,15 @@ public class Library
                 stringBuilder.append(currentLine + "\n");
             }
             masterLibraryString = stringBuilder.toString();
-            if (bufferedReader.readLine() == null)
+            if (masterLibraryString == "")
             {
                 Log.d("ALL", "It's all null? Always has been");
                 masterLibraryString = gson.toJson(new Library());
             }
             inputStream.close();
-            Log.d("ALL", stringBuilder.toString());
+            Log.d("ALL", masterLibraryString);
             Log.d("ALL", "Is the fileString behind me?");
-            masterLibrary = gson.fromJson(stringBuilder.toString(), Library.class);
+            masterLibrary = gson.fromJson(masterLibraryString, Library.class);
         }
         else if (inputStream == null)
         {
